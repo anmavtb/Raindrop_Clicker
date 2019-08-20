@@ -1,7 +1,6 @@
-var argent = 1000;
+var argent = 0;
 var prixRecipient = 100;
-var demande = 5;
-var monnaie = 100;
+var finit = false;
 
 /* % de niveau d'eau inversé  */
 var lvlEauInv = 100;
@@ -40,13 +39,15 @@ function upRecipient() {
 }
 
 /* Récupération de l'eau par la population */
-function recupEau() {
-    if (nbrGouttes >= demande) {
+function recupEau(demande, monnaie) {
+    if (demande !== 0 && nbrGouttes >= demande) {
         nbrGouttes -= demande;
         argent += monnaie;
+        finit = true;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById('nbrGouttes').innerHTML = nbrGouttes + " / " + lvlEauMax;
         document.getElementById("argent").innerHTML = "Argent = " + argent + "€";
         posEau.style.height = lvlEauInv + "%";
+        return finit;
     }
 }

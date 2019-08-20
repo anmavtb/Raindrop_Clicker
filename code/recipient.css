@@ -1,10 +1,11 @@
 body {
     background-image: url(../images/background1.png);
-    background-size: 1920px 1080px;
+    background-size: 1920px 1222px;
+    background-repeat: no-repeat;
 }
 
 #recipient {
-    margin: 400px;
+    margin-top: 25%;
     margin-left: 45%;
     width: 200px;
     height: 200px;
@@ -26,6 +27,6 @@ body {
 #nbrGouttes {
     position: absolute;
     z-index: 1000;
-    margin-top: -1%;
-    margin-left: 4%;
+    margin-top: 19%;
+    margin-left: 0%;
 }

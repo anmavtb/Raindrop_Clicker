@@ -42,11 +42,22 @@ class goute{
 
 
 
-document.getElementById('affichage').innerHTML = score + " gouttes";
+document.getElementById("affichage").innerHTML = score + " gouttes";
 
 function clickBouton() {
     var random = Math.floor(Math.random()*20)+30;
     new goute(random);
+    elem = document.getElementById("gout");
+    pos = 200;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (pos >= 550) {
+            clearInterval(id);
+        } else {
+            pos += 10;
+            elem.style.top = pos + 'px';
+        }
+    }
     niveauEau();
     console.log(random);
 }
