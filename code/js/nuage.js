@@ -24,7 +24,7 @@ class goute{
             this.createDivGoute.style.width = "100px";
             this.createDivGoute.style.height = "100px";
             this.createDivGoute.className = "gouteDeau";
-            this.createDivGoute.background = `url('../images/Goutte_d'eau.png')`;
+            this.createDivGoute.background = `url('/images/Goutte_d'eau.png')`;
             this.createDivGoute.backgroundRepeat = "no-repeat";
             this.createDivGoute.backgroundPosition = "center";
             this.createDivGoute.style.right = `${this.random}%`;
