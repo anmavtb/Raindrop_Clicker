@@ -1,4 +1,4 @@
-var prixRecipient = 100;
+var prixReservoir = 100;
 var finit = false;
 
 /* % de niveau d'eau inversé  */
@@ -24,16 +24,16 @@ function niveauEau() {
 }
 
 /* Amélioration de la taille du récipient */
-function upRecipient() {
-    if (argent >= prixRecipient) {
-        argent -= prixRecipient;
+function upReservoir() {
+    if (argent >= prixReservoir) {
+        argent -= prixReservoir;
         lvlEauMax += 10;
-        prixRecipient *= 1.1;
+        prixReservoir *= 1.1;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById("nbrGouttes").innerHTML = nbrGouttes + " / " + Math.round(lvlEauMax);
         document.getElementById("argent").innerHTML = "Argent = " + Math.round(argent) + "€";
         posEau.style.height = lvlEauInv + "%";
-        document.getElementById("upMenuRecipient").innerHTML = "Récipient | " + Math.round(prixRecipient) + "€";
+        document.getElementById("upMenuReservoir").innerHTML = "Récipient | " + Math.round(prixReservoir) + "€";
     }
 }
 
