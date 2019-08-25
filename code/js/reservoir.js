@@ -1,5 +1,5 @@
 var prixReservoir = 100;
-var finit = false;
+var priseEau = false;
 
 /* % de niveau d'eau inversé  */
 var lvlEauInv = 100;
@@ -39,14 +39,14 @@ function upReservoir() {
 
 /* Récupération de l'eau par la population */
 function recupEau(demande, monnaie) {
-    if (demande !== 0 && nbrGouttes >= demande) {
+    if (nbrGouttes >= demande) {
         nbrGouttes -= demande;
         argent += monnaie;
-        finit = true;
+        priseEau = true;
         lvlEauInv = (100 - ((nbrGouttes * 100) / lvlEauMax));
         document.getElementById('nbrGouttes').innerHTML = nbrGouttes + " / " + lvlEauMax;
         document.getElementById("argent").innerHTML = "Argent = " + Math.round(argent) + "€";
         posEau.style.height = lvlEauInv + "%";
-        return finit;
+        return priseEau;
     }
 }

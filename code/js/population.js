@@ -1,86 +1,103 @@
-var demande = 5;
-var monnaie = 100;
-var finit = false;
-var position = 930;
-var fonctionPrete = 0;
+var difficult = 1;
+var posPerso = 0;
+var posFinale = 930;
+var pers = document.getElementById("perso");
+var fonctionT = 0;
+var priseEau = false;
 
+
+function Personnage(demande, monnaie, vie, image) {
+    this.demande = demande; // Nombre de gouttes demandées //
+    this.monnaie = monnaie; // Argent qu'il va payer //
+    this.vie = vie; // Temps qu'il va rester //
+    this.image = image; // Sa tête //
+}
+
+var perso1 = new Personnage(2, 20, 150, "images/haha.gif"); // Naufragé //
+var perso2 = new Personnage(10, 100, 100, "images/haha2.gif"); // Taliban //
+var perso3 = new Personnage(50, 500, 50, "images/haha3.gif"); // Femme //
 
 /*
-var div = document.querySelector('#life');
-var left = 0;
-var updateleft = function() {
-    left=left+10
-    if (left>700) {
-        left=700;
-    }
-    div.style.left= left+"px";
-}
-setInterval(updateleft, 60);
+alert("perso1 : " + perso1.demande + " | " + perso1.monnaie + " | " + perso1.vie + " | " + perso1.image);
+alert("perso2 : " + perso2.demande + " | " + perso2.monnaie + " | " + perso2.vie + " | " + perso2.image);
+alert("perso3 : " + perso3.demande + " | " + perso3.monnaie + " | " + perso3.vie + " | " + perso3.image);
 */
 
 
 
-
-/* Perso 2 qui court */
-var dive = document.querySelector('#life2');
-var perso2interval;
-var left = 0;
-var updatelefte = function () {
-        left = left + 10;
-        if (left > position) {
-            left = position;
-            fonctionPrete++; /* fonctionPrete + 1 quand l'animation est terminée */
-        }
-        dive.style.left = left + "px";
-        if (fonctionPrete >= 1) { /* Activé dès que l'animation se termine pour la première fois */
-            if (finit === false) {
-                recupEau(demande, monnaie); /* Récupération de l'eau et payement */
-            } else if (finit === true) { /* Activé dès que la récupération d'eau et le payement ont été faits */
-                position = 1950;
-                setInterval(updatelefte, 60);
-                fonctionPrete = -1;
-            }
-        }
-    if (fonctionPrete < 0) {
-        left = left + 10;
-        if (left > position) {
-            left = position;
-            fonctionPrete--; /* fonctionPrete - 1 quand l'animation est terminée */
-        }
-        dive.style.left = left + "px";
-        if (fonctionPrete < -1) { /* Activé dès que le personnage sort de l'écran */
-            document.getElementsByClassName('haha').classList.toggle("disabled");
-        }
-    }
-};
-setInterval(updatelefte, 60); /* 1er déplacement du perso */
-
-
-
-/* Défiliement de la vie du mec qui court */
-var life2 = document.getElementsByClassName('haha')[0];
-var vieInterval = setInterval(()=> {
-    const computedStyle = getComputedStyle(life2);
-    const width = parseFloat(computedStyle.getPropertyValue('--width')) 
-    life2.style.setProperty('--width',width - .1);
-    if (width<=0){
-   clearInterval(vieInterval);
-        perso2interval = setInterval(updatelefte,60);
-    document.getElementById("life2").style.display="none";
-
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
 
-}, 30)
+
+
+var avancement = function () {
+    posPerso += 10;
+    if (posPerso >= posFinale) {
+        posPerso = posFinale;
+        fonctionT = 1;
+        Passage();
+    } else {
+        pers.style.left = posPerso + "px";
+    }
+};
 
 
 
+var perteVie = function () {
+    if (perso1.vie === 0) {
+        
+    }
+};
 
 
 
+function Passage(perso) {
+    document.getElementById("perso");
+    man.style.backgroundImage = "perso.image";
+    if (document.getElementById("perso").classList.contains("disabled")) { // Rend visible le personnage si il ne l'est pas
+        perso.style.display = "contents";
+        document.getElementById("perso").classList.toggle("disabled");
+    } else {
+        setInterval(avancement, 60);
+        if (fonctionT >= 1) {
+            clearInterval(avancement);
+            if (priseEau === true) {
+                posFinale = 1950;
+                setInterval(avancement, 60);
+                if (fonctionT >= 2) {
+                    clearInterval(avancement);
+                    document.getElementById("perso").classList.toggle("disabled"); // Rend invisible le personnage
+                    perso.style.display = "disabled";
+                    pers.style.left = 0 + "px";
+                    Game();
+                }
+            } else {
+                recupEau(perso.demande, perso.monnaie);
+            }
+        }
+    }
+}
 
-var lifeIndicator = document.querySelector('#life div');
-var pourcent=0;
-addEventListener('timeupdate',function(){
-console.log(this.duration);
-console.log(this.currentTime);
-});
+
+
+function Game() {
+    switch (getRandomInt(difficult)) {
+    case 0:
+        console.log("switch bon");
+        Passage(perso1);
+        break;
+    case 1:
+        Passage(perso2);
+        break;
+    case 2:
+        Passage(perso3);
+        break;
+    default:
+        alert("Y'a un problème Billy !");
+    }
+}
+
+
+
+Game();
