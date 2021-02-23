@@ -3,11 +3,11 @@
 
 ## A intégrer
 * Augmentation taille réservoir
-    - [x] Réservoir
+    - [ ] Réservoir
 * Auto Clic
-    - [x] Chaman
+    - [ ] Chaman
 * Augmentation quantité eau produite
-    - [x] Nuage
+    - [ ] Nuage
     - [ ] Puits
     - [ ] Forage
     - [ ] Condensateur d'humidité

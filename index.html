@@ -4,27 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="language" content="fr">
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="code/css/style.css">
     <title>RainDropClicker</title>
 </head>
 
-<body onload="loading()">
+<body onload="update()">
     <nav>
         <div id="money"></div>
         <ul id="menu">
             <li><a href="#">Améliorations</a>
                 <ul>
-                    <li><a id="" href="javascript:()"></a></li>
-                    <li><a id="" href="javascript:()"></a></li>
-                    <li><a id="" href="javascript:()"></a></li>
+                    <li><a href="javascript:()">Améliorer réservoir</a></li>
+                    <li><a href="javascript:()">Clic automatique</a></li>
+                    <li><a href="javascript:getWater(VILLAGER_1)">Donner à boire au villageois</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
-    <div id="cloud" onclick="waterLevel()">
-        <img src="images/cloud.png">
-    </div>
+    <div id="cloud" onclick="waterLevel()"></div>
 
     <div id="tank">
         <div id="dropsAmount"></div>

@@ -15,3 +15,16 @@
     position: absolute;
     margin-top: -2%;
 }
+
+#cloud {
+    width:200px;
+	height:130px;
+    padding: 5px;
+	background:url(../../images/cloud.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+	cursor:pointer;
+    border: 1px solid red;
+    border-radius: 100px / 70px;
+}
