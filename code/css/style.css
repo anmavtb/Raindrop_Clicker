@@ -1,0 +1,17 @@
+#tank {
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    border-top: none;
+    background-color: blue;
+}
+
+#waterLevel {
+    height: 100%;
+    background-color: #c3ddf2;
+}
+
+#dropsAmount {
+    position: absolute;
+    margin-top: -2%;
+}
