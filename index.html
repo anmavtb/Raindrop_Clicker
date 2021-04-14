@@ -15,9 +15,10 @@
         <ul id="menu">
             <li><a href="#">Améliorations</a>
                 <ul>
-                    <li><a href="javascript:()">Améliorer réservoir</a></li>
-                    <li><a href="javascript:()">Clic automatique</a></li>
-                    <li><a href="javascript:getWater(VILLAGER_1)">Donner à boire au villageois</a></li>
+                    <li><a id="upgradeTank" href="javascript:upgradeTank()"></a></li>
+                    <li><a href="javascript:suprVillager(allVillagers)">Supprimer Villageois</a></li>
+                    <li><a href="javascript:createVillager()">Création villageois</a></li>
+                    <li><a href="javascript:getWater(allVillagers)">Donner à boire au villageois</a></li>
                 </ul>
             </li>
         </ul>
@@ -29,6 +30,7 @@
         <div id="dropsAmount"></div>
         <div id="waterLevel"></div>
     </div>
+    <div id ="animVillager"></div>
 
 </body>
 
