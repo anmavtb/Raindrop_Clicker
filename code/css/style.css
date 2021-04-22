@@ -20,7 +20,7 @@
     width:200px;
 	height:130px;
     padding: 5px;
-	background:url(../../images/cloud.png);
+	background:url('../../images/cloud.png');
     background-size: 200px;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,10 +28,3 @@
     border: 1px solid red;
     border-radius: 100px / 70px;
 }
-
-#animVillager {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: red;
-  }
