@@ -3,7 +3,7 @@
 
 ## A intégrer
 * Augmentation taille réservoir
-    - [ ] Réservoir
+    - [x] Réservoir
 * Auto Clic
     - [ ] Chaman
 * Augmentation quantité eau produite
