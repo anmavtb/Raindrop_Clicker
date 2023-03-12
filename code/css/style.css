@@ -42,3 +42,19 @@
     padding: 10px;
     font-size: 20px;
 }
+
+.villager {
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    left: -150px;
+    top: 650px;
+}
+
+.villager-text {
+    position: relative;
+    top: -25px;
+    text-align: center;
+}

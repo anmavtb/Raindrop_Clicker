@@ -5,9 +5,9 @@
 * Augmentation taille
     - [x] Réservoir
 * Auto Clic
-    - [] Chaman
+    - [ ] Chaman
 * Augmentation quantité eau produite
-    - [X] Nuage
+    - [x] Nuage
     - [ ] Puits
     - [ ] Forage
     - [ ] Condensateur d'humidité
