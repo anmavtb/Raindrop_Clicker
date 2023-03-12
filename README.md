@@ -1,13 +1,13 @@
 # Raindrop Clicker
-[Lien du jeu](https://anmavtb.github.io/raindrop_clicker/)
+<!-- [Lien du jeu](https://anmavtb.github.io/raindrop_clicker/) -->
 
 ## A intégrer
-* Augmentation taille réservoir
-    - [ ] Réservoir
+* Augmentation taille
+    - [x] Réservoir
 * Auto Clic
-    - [ ] Chaman
+    - [] Chaman
 * Augmentation quantité eau produite
-    - [ ] Nuage
+    - [X] Nuage
     - [ ] Puits
     - [ ] Forage
     - [ ] Condensateur d'humidité

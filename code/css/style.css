@@ -1,9 +1,31 @@
+#cloud {
+    width: 200px;
+    height: 130px;
+    padding: 5px;
+    background: url('../../images/cloud.png');
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 100px / 70px;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #tank {
     width: 200px;
     height: 200px;
     border: 5px solid black;
     border-top: none;
     background-color: blue;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    text-align: center;
 }
 
 #waterLevel {
@@ -13,18 +35,10 @@
 
 #dropsAmount {
     position: absolute;
-    margin-top: -2%;
-}
-
-#cloud {
-    width:200px;
-	height:130px;
-    padding: 5px;
-	background:url('../../images/cloud.png');
-    background-size: 200px;
-    background-repeat: no-repeat;
-    background-position: center;
-	cursor:pointer;
-    border: 1px solid red;
-    border-radius: 100px / 70px;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 20px;
 }
